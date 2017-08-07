@@ -4,6 +4,7 @@ var jsdom = require('jsdom'),
     file = fs.readFileSync('index.html').toString();
 
 describe('Your HTML Page', function() {
+  this.timeout(15000);
   var window;
   before(function(next) {
     jsdom.env(
